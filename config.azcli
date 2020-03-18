@@ -1,0 +1,5 @@
+az group create --name AZ00Static --location eastus
+az appservice plan create --name AZ00Static --resource-group AZ00Static --is-linux
+az webapp create --name firststatic --plan AZ00Static --runtime '"node|8.1"' --resource-group AZ00Static
+az webapp list-runtimes
+az webapp browse --name firststatic --resource-group AZ00Static
